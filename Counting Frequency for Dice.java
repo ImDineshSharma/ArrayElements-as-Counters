@@ -8,10 +8,10 @@ import java.util.Random;
 public class Dice{
    public static void main(String[] args){
       Random rand = new Random();
-      int[] freq = new int[7] // 0-6 = 7
+      int[] freq = new int[7]; // 0-6 = 7
       
       for(int roll = 1; roll<100; roll++){
-       ++freq[1+rand.newInt(6)]; // [generages random no from 1-6], ++freq = each time a no is hit, it will be pre-incremented
+       ++freq[1+rand.nextInt(6)]; // [generages random no from 1-6], ++freq = each time a no is hit, it will be pre-incremented
       }
       
       System.out.println("FACE\tFREQUENCY"); // header for table
